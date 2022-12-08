@@ -16,7 +16,7 @@ const NewAuctionForm = (props) => {
         event.currentTarget.reset()
     }
     return(
-        <div style={{marginLeft:'10vw', textAlign:'center', width: '100vh'}}>
+        <div style={{marginLeft:'25vw', textAlign:'center', width: '100vh'}}>
         <form onSubmit={getDataAndSubmit} style={{marginTop:"5vh"}}>
           <div class="row mb-3">
             <label htmlFor="title" class="col-sm-2 col-form-label">Title</label>
@@ -43,7 +43,7 @@ const NewAuctionForm = (props) => {
             </div>
         </div>
         <div>
-            <input type="submit" value="Create Auction" class="btn btn-secondary" style={{float:"right", width:'30vw'}}/>
+            <input type="submit" value="Create Auction" class="btn btn-secondary" style={{float:"right", width:'20vw'}}/>
         </div>
 
     </form>
