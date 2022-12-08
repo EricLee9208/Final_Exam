@@ -1,0 +1,16 @@
+<h2><%= @auction.title%> </h2>
+<p>Author: <%=@auction.user.full_name%></p>
+<%= button_to 'Delete', auction_path(@auction), method: :delete, form: {data: {turbo_confirm: "Are you sure?"}} %>
+<br>
+<hr>
+<% @bids.each do |bid|%>
+  <p><%= bid.price%> <%=bid.created_at%> <%= bid.user.full_name%> </p>
+<% end %>
+<%= form_with(model:[@auction, @bid]) do |f| %>
+  <div>
+    <%= f.label :price %>
+    <br>
+    <%= f.number_field :price %>
+  </div>
+  <%= f.submit "Bid" %>
+<% end %>
